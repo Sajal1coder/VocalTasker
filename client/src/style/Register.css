@@ -1,0 +1,82 @@
+/* Outer container for register page */
+.register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f5f5f5; /* Light background color */
+  }
+  
+  /* Inner content container for the form */
+  .register_content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    max-width: 400px; /* Limit form width */
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Style for the form inputs */
+  .register_content_form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Focused input state */
+  .register_content_form input:focus {
+    border-color: #2D3A4B; /* Blue border on focus */
+  }
+  
+  /* Style for the register button */
+  .register_content_form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #2D3A4B; /* Blue background */
+    color: white;
+    border: none;
+    align-self: center;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Disabled button state */
+  .register_content_form button:disabled {
+    background-color: #ccc; /* Gray for disabled */
+    cursor: not-allowed;
+  }
+  
+  /* Hover effect for button */
+  .register_content_form button:hover:not(:disabled) {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Error message for password mismatch */
+  .register_content_form p {
+    font-size: 14px;
+    margin: 0;
+    padding-top: 5px;
+  }
+  
+  /* Link to login page */
+  .register_content a {
+    display: block;
+    margin-top: 15px;
+    color: #2D3A4B;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  /* Hover effect for the login link */
+  .register_content a:hover {
+    text-decoration: underline;
+  }

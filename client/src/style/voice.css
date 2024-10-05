@@ -1,0 +1,246 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+.voice {
+  font-size: 20px;
+  width: 100vw;
+  min-height: 40vh;
+  display: grid;
+  place-items: center;
+  background-color: #F5F5F5;
+  color: #333;
+  padding: 20px;
+}
+
+.voice_input {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #2D3A4B;
+}
+
+.voice_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice_button button {
+  background-color: #2D3A4B;
+  color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.voice_button button:hover {
+  background-color: #34495E;
+  box-shadow: 0 8px 16px #C0392B;
+}
+
+.voice_button button:active {
+  transform: scale(0.95);
+}
+
+.transcript {
+  font-size: 1rem;
+  margin-top: 20px;
+  text-align: center;
+  color: #666;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.task-list {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.task-list h3 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+  color: #2D3A4B;
+  font-weight: bold;
+  border-bottom: 2px solid #2D3A4B;
+  padding-bottom: 5px;
+}
+
+.task-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+/* Existing styles remain unchanged */
+
+/* Updated .task-list li to have three columns */
+.task-list li {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Three columns now */
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Positioning child elements */
+.task-name {
+  grid-column: 1; /* First column */
+  font-size: 1rem;
+  color: #2D3A4B;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.task-list li input[type="checkbox"] {
+  grid-column: 2; /* Second column */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  justify-self: center;
+  align-self: center;
+}
+
+.task-list li .task-actions {
+  grid-column: 3; /* Third column */
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 600px) {
+  .task-list li {
+    grid-template-columns: 1.5fr 1fr 1fr; /* Adjust column widths */
+    gap: 10px; /* Add some spacing */
+  }
+
+  .task-list li .task-actions {
+    justify-self: center; /* Center the delete button */
+  }
+
+  .task-list li .task-actions button.but {
+    padding: 5px 8px; /* Slightly smaller padding for better fit */
+    font-size: 14px; /* Adjust font size if necessary */
+  }
+}
+
+.but{
+  background-color: rgb(136, 8, 8);
+  color: white;
+  border-radius: 2px;
+}
+
+.task-list li .task-actions button.but:hover {
+  background-color: #A93226;
+  transform: scale(1.05);
+}
+
+.task-list li .task-actions button.but:active {
+  transform: scale(0.95);
+}
+
+.no-tasks {
+  font-size: 1.2rem;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  background-color: #2D3A4B;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #34495E;
+}
+
+.login-button:active {
+  background-color: #3e8e41;
+  transform: translateY(2px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .voice {
+    font-size: 18px;
+    height: auto;
+  }
+
+  .voice_button button {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+
+  .task-list h3 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .task-list li {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .task-list li .task-actions {
+    justify-self: center;
+  }
+}
+
+.info-button-container {
+  position: relative;
+  display: inline-block;
+}
+
+.info-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none; /* Remove focus outline */
+}
+.tooltip {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+  display: none;
+}
+
+.info-button:hover + .tooltip {
+  display: block;
+}
+
+.info-button-container:hover .tooltip {
+  display: block;
+}
+
+@media (max-width: 786px) {
+  .tooltip {
+    display: none;
+  }
+}

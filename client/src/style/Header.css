@@ -1,0 +1,83 @@
+/* Style for the entire navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2D3A4B; /* Dark background for navbar */
+  padding: 10px 20px; /* Padding for spacing */
+  height: 80px; /* Set a fixed height for consistency */
+}
+
+/* Logo image in navbar */
+.navbar img {
+  height: 70px; /* Adjust logo size */
+}
+
+/* Right part of the navbar */
+.right-part {
+  display: flex;
+  align-items: center;
+}
+
+/* Head class for login link */
+.head {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-right: 20px; /* Space between login and other items */
+  transition: color 0.3s ease;
+}
+
+.head:hover {
+  color: #356381; /* Hover effect for login link */
+}
+
+/* Button for dropdown */
+.button_right {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+}
+.button_right:hover{
+   background-color: transparent;
+}
+
+/* Style for dropdown menu */
+.navbar_right_accountmenu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 10;
+  width: 200px;
+  text-align: left;
+}
+
+/* Links inside the dropdown menu */
+.navbar_right_accountmenu a {
+  width:100%;
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar_right_accountmenu a:hover {
+  background-color:#2D3A4B; /* Change background on hover */
+  color: white;
+}
+
+/* Welcome message styling */
+.right-part h1 {
+  color: white;
+  font-size: 18px;
+  margin-right: 20px;
+}
+
